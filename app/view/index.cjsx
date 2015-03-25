@@ -5,7 +5,7 @@ React = require 'react'
 module.exports = React.createClass
   mixins: [State]
   render: ->
-    {sha, description, author, title} = @props
+    {sha, description, author, title, facebook} = @props
     appFileName = sha or 'app'
     cssFilePath = "/assets/#{appFileName}.css"
     jsFilePath = "/assets/#{appFileName}.js"
