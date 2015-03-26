@@ -7,7 +7,7 @@ module.exports = React.createClass
 
     <section className="contact">
       <div className="group">
-        <div className="column eight offset-by-two">
+        <div className="ten columns offset-by-one">
           <Wufoo hash={hash} subdomain={subdomain} />
         </div>
       </div>
