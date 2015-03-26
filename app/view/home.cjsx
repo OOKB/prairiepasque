@@ -6,6 +6,7 @@ Footer = require './footer'
 module.exports = React.createClass
   render: ->
     {facebook, instagram, currentYear, title} = @props
+    {db: {wufoo: {hash, subdomain}}} = @props
 
     <div className="container text-center clearfix">
       <header>
@@ -15,7 +16,7 @@ module.exports = React.createClass
       </header>
       <main>
         <Slideshow instagram={instagram} />
-        <Contact />
+        <Contact hash={hash} subdomain={subdomain} />
       </main>
       <Footer currentYear={currentYear} title={title} />
     </div>
