@@ -1,10 +1,11 @@
 React = require 'react'
 Slideshow = require './slideshow'
 Contact = require './contact'
+Footer = require './footer'
 
 module.exports = React.createClass
   render: ->
-    {facebook, instagram} = @props
+    {facebook, instagram, currentYear, title} = @props
 
     <div className="container text-center clearfix">
       <header>
@@ -12,8 +13,8 @@ module.exports = React.createClass
         <h1>{facebook.name}</h1>
         <p>{facebook.about}</p>
       </header>
-      <Slideshow instagram={instagram} />
-      <footer>
-        <p>tk</p>
-      </footer>
+      <main>
+        <Slideshow instagram={instagram} />
+      </main>
+      <Footer currentYear={currentYear} title={title} />
     </div>
