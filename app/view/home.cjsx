@@ -5,9 +5,9 @@ Footer = require './footer'
 
 module.exports = React.createClass
   render: ->
-    {facebook, instagram, currentYear, title} = @props
-    if @props?.db?.wufoo
-      ContactEl = <Contact wufoo={wufoo} />
+    {facebook, instagram, currentYear, title, db} = @props
+    if db?.wufoo
+      ContactEl = <Contact wufoo={db.wufoo} />
     <div className="container text-center clearfix">
       <header>
         <img src={facebook.photos.data[0].source} />
