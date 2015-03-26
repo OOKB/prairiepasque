@@ -15,6 +15,7 @@ module.exports = React.createClass
       </header>
       <main>
         <Slideshow instagram={instagram} />
+        <Contact />
       </main>
       <Footer currentYear={currentYear} title={title} />
     </div>

@@ -1,11 +1,10 @@
 React = require 'react'
+Wufoo = require './wufoo'
 
 module.exports = React.createClass
   render: ->
-    {facebook, data, query} = @props
+    {currentYear, title} = @props
 
-    <div className="container">
-      <img src={facebook.photos.data[0].source} />
-      <h1>{facebook.name}</h1>
-      <p>{facebook.about}</p>
-    </div>
+    <section className="contact">
+      <Wufoo />
+    </section>
