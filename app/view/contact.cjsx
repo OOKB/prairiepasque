@@ -6,5 +6,9 @@ module.exports = React.createClass
     {hash, subdomain} = @props.wufoo
 
     <section className="contact">
-      <Wufoo hash={hash} subdomain={subdomain} />
+      <div className="group">
+        <div className="column eight offset-by-two">
+          <Wufoo hash={hash} subdomain={subdomain} />
+        </div>
+      </div>
     </section>

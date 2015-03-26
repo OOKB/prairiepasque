@@ -12,7 +12,7 @@ module.exports = React.createClass
       <header>
         <img src={facebook.photos.data[0].source} />
         <h1>{facebook.name}</h1>
-        <p>{facebook.about}</p>
+        <h2>{facebook.about}</h2>
       </header>
       <main>
         <Slideshow instagram={instagram} />

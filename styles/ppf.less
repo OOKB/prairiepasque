@@ -2,6 +2,11 @@
 body {
   padding-top: 60px;
   padding-bottom: 300px;
+  font-family: @gentium-stack;
+}
+
+body .container {
+  max-width: 700px;
 }
 
 img.logo { max-width: 100%; }
@@ -23,42 +28,25 @@ p.caption {
   margin: 1em auto;
 }
 
-#form6 div {
-  margin-bottom: 30px;
-}
-
-#form6 div > label {
-  display: block;
-}
-
-#form6 div > input,
-#form6 div textarea {
-  width: 100%;
-}
-
-#form6 div > span {
-  float: left;
-  width: 47.5%;
-}
-
-#form6 div > span.gutter   {
-  margin-right: 5%;
-}
-
-#form6 div > span input {
-  display: inline-block;
-  width: 100%;
-}
-
-span > label,
-span.req,
-form small {
-  color: #B9BAB8;
-  font-weight: normal;
-}
-
 .clear {display:block;clear: both;}
 
+/* Header
+   ============= */
+
+header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid black;
+  margin-bottom: 4rem;
+}
+
+header h1 {
+  display: none;
+}
+
+header h2 {
+  font-weight: 400;
+  font-size: 2rem;
+}
 
 /* Slideshow
    ============= */
@@ -68,16 +56,16 @@ ul.insta-list {
   padding: 0;
   list-style: none;
   position: relative;
-  width: 640px;
-  height: 640px;
+  width: 280px;
+  height: 280px;
 }
 
 ul.insta-list li {
   margin: 0;
   padding: 0;
   list-style: none;
-  height: 640px;
-  width:640px;
+  height: 280px;
+  width:280px;
   position: absolute;
   z-index: 1;
   opacity: 0;
@@ -104,6 +92,55 @@ ul.insta-list li:hover p {
   bottom: 0;
   left:0;
   right:0;
+}
+
+@media (min-width: 400px) {
+  ul.insta-list,
+  ul.insta-list li {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+@media (min-width: 500px) {
+  ul.insta-list,
+  ul.insta-list li {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 600px) {
+  ul.insta-list,
+  ul.insta-list li {
+    width: 480px;
+    height: 480px;
+  }
+}
+
+@media (min-width:700px) {
+  ul.insta-list,
+  ul.insta-list li {
+    width: 560px;
+    height: 560px;
+  }
+}
+
+@media (min-width:800px) {
+  ul.insta-list,
+  ul.insta-list li {
+    width: 640px;
+    height: 640px;
+  }
+}
+
+/* Contact / Wufoo
+   ========================= */
+
+.contact {
+  border-top: 1px solid black;
+  margin-top: 5rem;
+  padding-top: 2rem;
 }
 
 /* Footer
