@@ -6,8 +6,8 @@ Footer = require './footer'
 module.exports = React.createClass
   render: ->
     {facebook, instagram, currentYear, title} = @props
-    {db: {wufoo: {hash, subdomain}}} = @props
-
+    if @props?.db?.wufoo
+      ContactEl = <Contact wufoo={wufoo} />
     <div className="container text-center clearfix">
       <header>
         <img src={facebook.photos.data[0].source} />
@@ -16,7 +16,7 @@ module.exports = React.createClass
       </header>
       <main>
         <Slideshow instagram={instagram} />
-        <Contact hash={hash} subdomain={subdomain} />
+        {ContactEl}
       </main>
       <Footer currentYear={currentYear} title={title} />
     </div>

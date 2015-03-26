@@ -3,8 +3,8 @@ Wufoo = require './wufoo'
 
 module.exports = React.createClass
   render: ->
-    {currentYear, title} = @props
+    {hash, subdomain} = @props.wufoo
 
     <section className="contact">
-      <Wufoo />
+      <Wufoo hash={hash} subdomain={subdomain} />
     </section>
