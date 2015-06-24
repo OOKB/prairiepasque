@@ -10,7 +10,7 @@ module.exports = React.createClass
       ContactEl = <Contact wufoo={db.wufoo} />
     <div className="container text-center clearfix">
       <header>
-        <img src={facebook.photos.data[0].source} />
+        <img src={facebook.profilePhotos[0].images[0].source} />
         <h1>{facebook.name}</h1>
         <h2>{facebook.about}</h2>
       </header>
